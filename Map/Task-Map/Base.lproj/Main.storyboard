@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Task_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y89-tj-KFU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-dU-GEn">
+                                        <rect key="frame" x="170" y="47" width="74.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="6iw-UP-gl7">
+                                        <rect key="frame" x="374" y="48.5" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34T-e5-5TC">
+                                        <rect key="frame" x="16" y="45" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bNc-yu-YGD"/>
+                                            <constraint firstAttribute="width" constant="30" id="zAC-ky-K8X"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="white-hamburger-menu-icon-png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="AppThemeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ngV-dU-GEn" secondAttribute="bottom" constant="15" id="5Li-as-KBI"/>
+                                    <constraint firstAttribute="bottom" secondItem="34T-e5-5TC" secondAttribute="bottom" constant="10" id="ATW-ol-lhs"/>
+                                    <constraint firstAttribute="height" constant="85" id="Xeg-2p-hRz"/>
+                                    <constraint firstItem="6iw-UP-gl7" firstAttribute="centerY" secondItem="ngV-dU-GEn" secondAttribute="centerY" id="YgM-cl-qad"/>
+                                    <constraint firstItem="ngV-dU-GEn" firstAttribute="centerX" secondItem="y89-tj-KFU" secondAttribute="centerX" id="c52-Q6-lqK"/>
+                                    <constraint firstAttribute="trailing" secondItem="6iw-UP-gl7" secondAttribute="trailing" constant="20" id="e8J-q8-xe9"/>
+                                    <constraint firstItem="34T-e5-5TC" firstAttribute="leading" secondItem="y89-tj-KFU" secondAttribute="leading" constant="16" id="rgS-PV-3qU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYq-OM-i2s">
+                                <rect key="frame" x="0.0" y="85" width="414" height="811"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <searchBar contentMode="redraw" placeholder="Search Company" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuK-Wh-Oh9">
+                                <rect key="frame" x="16" y="101" width="382" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="89J-bb-DtG"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lYq-OM-i2s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3gT-4d-JJ0"/>
+                            <constraint firstItem="lYq-OM-i2s" firstAttribute="top" secondItem="y89-tj-KFU" secondAttribute="bottom" id="Am8-fm-HnU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y89-tj-KFU" secondAttribute="trailing" id="Jan-cq-pbz"/>
+                            <constraint firstAttribute="bottom" secondItem="lYq-OM-i2s" secondAttribute="bottom" id="e2H-px-PQJ"/>
+                            <constraint firstItem="KuK-Wh-Oh9" firstAttribute="top" secondItem="y89-tj-KFU" secondAttribute="bottom" constant="16" id="ehd-SU-YD1"/>
+                            <constraint firstItem="y89-tj-KFU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pNb-MX-kfY"/>
+                            <constraint firstItem="y89-tj-KFU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qn0-6V-31a"/>
+                            <constraint firstItem="KuK-Wh-Oh9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tOa-IX-NnC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lYq-OM-i2s" secondAttribute="trailing" id="tvM-qb-dYV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KuK-Wh-Oh9" secondAttribute="trailing" constant="16" id="xYH-VL-Mjb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="6iw-UP-gl7" id="tPH-A0-ExJ"/>
+                        <outlet property="mapHolderView" destination="lYq-OM-i2s" id="Luw-uP-oEx"/>
+                        <outlet property="searchBar" destination="KuK-Wh-Oh9" id="scb-hg-lCu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="white-hamburger-menu-icon-png" width="256" height="256"/>
+        <namedColor name="AppThemeColor">
+            <color red="0.11372549019607843" green="0.35294117647058826" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
